@@ -24,18 +24,7 @@ steps:
     az login --service-principal -u "135f834a-fcd8-42bd-8d85-61367564aa13" -p "zlR8Q~JpZV0ZW0xZNYxdz9Xw3Nr~.e6.qSg~kb8L" --tenant "1113c82b-03a8-4173-9f93-96c71f6d4990"
   displayName: 'Azure Login'
 
-# Execução do script Python
-- script: python create_resource.py
-  displayName: 'Run create_resource.py'
-
-# Especificação das funções e parâmetros
-functions:
-  - name: create_cosmos_db_resource
-    description: "Cria um recurso Cosmos DB"
-    parameters:
-      - name: $(resource_group_name)
-        type: string
-        description: "O nome do grupo de recursos onde o Cosmos DB será criado."
-      - name: $(resource_group_name)
-        type: string
-        description: "O nome da conta do Cosmos DB."
+  
+- script: |
+    python create_resource.py create_cosmos_db_resource $(resource_group_name) $(cosmos_db_account_name)
+  displayName: 'Create Cosmos DB Resource'
