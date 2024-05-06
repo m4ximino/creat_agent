@@ -1,0 +1,14 @@
+azure-identity
+azure-mgmt-containerregistry
+azure-mgmt-cosmosdb
+azure-mgmt-resource
+azure-mgmt-search
+azure-mgmt-storage
+azure-mgmt-web
+azure-storage-blob
+azure-containerregistry
+azure-cosmos
+azure-core
+azure-search-documents
+azure-mgmt-cognitiveservices
+requests
