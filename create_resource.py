@@ -69,7 +69,7 @@ def create_cosmos_db_resource(resource_group_name, cosmos_db_account_name, locat
                     id=container_name,
                     partition_key=PartitionKey(path="/id")
                 )
-                
+    print("criou")
     return True
 
 def create_cognive_search_resource(resource_group_name, search_service_name, data_list):
