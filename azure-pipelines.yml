@@ -16,7 +16,7 @@ steps:
 
 # Instalação do Azure CLI
 - script: |
-    curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+    sudo curl -sL https://aka.ms/InstallAzureCLIDeb | bash
   displayName: 'Install Azure CLI'
 
 # Login no Azure
@@ -25,6 +25,6 @@ steps:
   displayName: 'Azure Login'
 
   
-- script: |
-    python create_resource.py create_cosmos_db_resource $(resource_group_name) $(cosmos_db_account_name)
-  displayName: 'Create Cosmos DB Resource'
+# - script: |
+#     python create_resource.py create_cosmos_db_resource $(resource_group_name) $(cosmos_db_account_name)
+#   displayName: 'Create Cosmos DB Resource'
