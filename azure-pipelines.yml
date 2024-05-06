@@ -16,7 +16,8 @@ steps:
 
 # Instalação do Azure CLI
 - script: |
-    sudo curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+    sudo apt-get update
+    sudo apt-get install -y azure-cli
   displayName: 'Install Azure CLI'
 
 # Login no Azure
